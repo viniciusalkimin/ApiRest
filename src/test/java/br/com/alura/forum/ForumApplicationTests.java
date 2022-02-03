@@ -1,5 +1,6 @@
 package br.com.alura.forum;
 
+<<<<<<< HEAD
 import java.net.URI;
 
 import org.junit.Test;
@@ -34,6 +35,19 @@ public class ForumApplicationTests {
 					
 		
 		
+=======
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ForumApplicationTests {
+
+	@Test
+	public void contextLoads() {
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 	}
 
 }

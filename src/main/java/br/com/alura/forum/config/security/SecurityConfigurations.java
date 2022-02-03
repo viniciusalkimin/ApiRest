@@ -3,7 +3,10 @@ package br.com.alura.forum.config.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+<<<<<<< HEAD
 import org.springframework.context.annotation.Profile;
+=======
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -19,7 +22,10 @@ import br.com.alura.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
+<<<<<<< HEAD
 @Profile(value= {"prod", "test"})
+=======
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -48,11 +54,18 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/topicos").permitAll()
+<<<<<<< HEAD
 		.antMatchers(HttpMethod.GET, "/topicos/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/auth").permitAll()
 		.antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
 		.antMatchers(HttpMethod.DELETE, "/topicos/*").hasRole("MODERADOR")
 		.anyRequest().authenticated() 
+=======
+		.antMatchers(HttpMethod.GET, "/topicos/*").permitAll()
+		.antMatchers(HttpMethod.POST, "/auth").permitAll()
+		.antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
+		.anyRequest().authenticated()
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 		.and().csrf().disable()
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().addFilterBefore(new AutenticacaoViaTokenFilter(tokenService, usuarioRepository), UsernamePasswordAuthenticationFilter.class);

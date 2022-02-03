@@ -3,7 +3,10 @@ package br.com.alura.forum.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.context.annotation.Profile;
+=======
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,7 +22,10 @@ import br.com.alura.forum.controller.dto.TokenDto;
 import br.com.alura.forum.controller.form.LoginForm;
 
 @RestController
+<<<<<<< HEAD
 @Profile(value= {"prod", "test"})
+=======
+>>>>>>> 5802e7ff6249ea57f6bb249dcc2d94cd93dd00b8
 @RequestMapping("/auth")
 public class AutenticacaoController {
 	
